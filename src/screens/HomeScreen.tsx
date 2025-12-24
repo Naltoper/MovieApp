@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     backgroundColor: '#111',
-    width: Platform.OS === 'web' ? '50%' : '90%',
+    // Largeur adaptée : 50% sur Web/PC, 95% sur Mobile
+    width: Platform.OS === 'web' && width > 800 ? '50%' : '95%',
     maxHeight: '80%',
     borderRadius: 10,
     overflow: 'hidden',
